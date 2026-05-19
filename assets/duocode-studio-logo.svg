@@ -1,0 +1,36 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 700 100"
+  role="img"
+  aria-labelledby="title desc"
+>
+  <title id="title">DuoCode Studio</title>
+  <desc id="desc">Minimal DuoCode Studio wordmark in white and blue on one line.</desc>
+  <defs>
+    <linearGradient id="wordBlue" x1="220" y1="8" x2="430" y2="78" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#1d5cff" />
+      <stop offset="1" stop-color="#2ba7ff" />
+    </linearGradient>
+    <style>
+      .wordmark {
+        font-family: "Segoe UI", Arial, sans-serif;
+        font-size: 86px;
+        font-weight: 300;
+        letter-spacing: -0.05em;
+      }
+
+      .studio-inline {
+        font-family: "Segoe UI", Arial, sans-serif;
+        font-size: 44px;
+        font-weight: 600;
+        letter-spacing: -0.02em;
+      }
+    </style>
+  </defs>
+
+  <g transform="translate(8 10)">
+    <text class="wordmark" x="0" y="68" fill="#ffffff">
+      <tspan>Duo</tspan><tspan fill="url(#wordBlue)">Code</tspan><tspan dx="18" class="studio-inline" fill="#f4f8ff" opacity="0.88">Studio</tspan>
+    </text>
+  </g>
+</svg>
