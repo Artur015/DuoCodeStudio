@@ -1,4 +1,4 @@
-const DUOCODE_GA_MEASUREMENT_ID = "G-XXXXXXXXXX";
+const DUOCODE_GA_MEASUREMENT_ID = "G-H67TV91VER";
 const DUOCODE_GA_PLACEHOLDER_ID = "G-XXXXXXXXXX";
 const DUOCODE_CONSENT_STORAGE_KEY = "duocode-analytics-consent";
 
@@ -21,7 +21,7 @@ function initializeGoogleQueue() {
 		analytics_storage: "denied",
 		ad_storage: "denied",
 		ad_user_data: "denied",
-		ad_personalization: "denied"
+		ad_personalization: "denied",
 	});
 }
 
@@ -44,12 +44,12 @@ function loadGoogleAnalytics() {
 		analytics_storage: "granted",
 		ad_storage: "denied",
 		ad_user_data: "denied",
-		ad_personalization: "denied"
+		ad_personalization: "denied",
 	});
 
 	window.gtag("js", new Date());
 	window.gtag("config", DUOCODE_GA_MEASUREMENT_ID, {
-		anonymize_ip: true
+		anonymize_ip: true,
 	});
 
 	const script = document.createElement("script");

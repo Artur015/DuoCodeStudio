@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Page Not Found | DuoCode Studio</title>
+		<meta
+			name="description"
+			content="The page you requested could not be found. Return to the DuoCode Studio website in English, Finnish, or Russian."
+		/>
+		<meta name="robots" content="noindex, follow" />
+		<meta name="theme-color" content="#071220" />
+		<link rel="icon" type="image/svg+xml" href="./assets/favicon.svg" />
+		<link rel="shortcut icon" href="./assets/favicon.svg" />
+		<link rel="canonical" href="https://duocodestudio.com/404.html" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="./styles.css" />
+		<script src="./analytics-consent.js" defer></script>
+		<script src="./script.js" defer></script>
+	</head>
+	<body>
+		<div class="page-shell">
+			<header class="site-header">
+				<a class="brand" href="./" aria-label="DuoCode Studio home">
+					<img class="brand-logo" src="./assets/duocode-studio-logo.svg" alt="DuoCode Studio" />
+				</a>
+				<nav class="site-nav" aria-label="Primary">
+					<a href="./">Home</a>
+					<a href="./#pricing">Pricing</a>
+					<a href="./#contact">Contact</a>
+				</nav>
+				<div class="language-switcher language-switcher-header" aria-label="Language switcher">
+					<a class="lang-button is-active" href="./" lang="en" hreflang="en">EN</a>
+					<a class="lang-button" href="./fi/" lang="fi" hreflang="fi">FI</a>
+					<a class="lang-button" href="./ru/" lang="ru" hreflang="ru">RU</a>
+				</div>
+			</header>
+
+			<main class="not-found-main">
+				<section class="not-found-card" data-reveal>
+					<p class="eyebrow">404</p>
+					<h1>Page not found.</h1>
+					<p>
+						The page you tried to open does not exist or may have moved. Choose the language version you want and return
+						to the main site.
+					</p>
+					<div class="not-found-actions">
+						<a class="button button-primary" href="./">English Home</a>
+						<a class="button button-secondary" href="./privacy-policy/">Privacy Policy</a>
+					</div>
+					<div class="not-found-links">
+						<a class="lang-button" href="./fi/" lang="fi" hreflang="fi">Suomi</a>
+						<a class="lang-button" href="./ru/" lang="ru" hreflang="ru">Русский</a>
+					</div>
+				</section>
+			</main>
+
+			<footer class="site-footer">
+				<p>DuoCode Studio creates multilingual websites for businesses with a modern design.</p>
+				<p>&copy; <span id="year"></span> DuoCode Studio</p>
+				<div class="language-switcher language-switcher-footer" aria-label="Language switcher">
+					<a class="lang-button is-active" href="./" lang="en" hreflang="en">EN</a>
+					<a class="lang-button" href="./fi/" lang="fi" hreflang="fi">FI</a>
+					<a class="lang-button" href="./ru/" lang="ru" hreflang="ru">RU</a>
+				</div>
+				<div class="footer-tools">
+					<a class="footer-link" href="./privacy-policy/">Privacy Policy</a>
+					<button class="cookie-settings-button is-hidden" id="cookie-settings-button" type="button">
+						Cookie settings
+					</button>
+				</div>
+			</footer>
+		</div>
+
+		<div
+			class="cookie-banner is-hidden"
+			id="cookie-banner"
+			role="dialog"
+			aria-live="polite"
+			aria-label="Analytics cookies"
+		>
+			<div class="cookie-banner-copy">
+				<p class="cookie-banner-kicker">Analytics cookies</p>
+				<p class="cookie-banner-text">
+					We use Google Analytics to understand how visitors use this site. Analytics stays off until you accept.
+					<a class="cookie-banner-link" href="./privacy-policy/">Read the Privacy Policy</a>.
+				</p>
+			</div>
+			<div class="cookie-banner-actions">
+				<button class="button button-primary" id="cookie-accept" type="button">Accept</button>
+				<button class="button button-secondary" id="cookie-reject" type="button">Only necessary</button>
+			</div>
+		</div>
+	</body>
+</html>
