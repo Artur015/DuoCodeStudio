@@ -174,17 +174,33 @@
 					<img class="brand-logo" src="../assets/duocode-studio-logo.svg" alt="DuoCode Studio" width="410" height="82" />
 				</a>
 
-				<nav class="site-nav" aria-label="Päänavigaatio">
-					<a href="#pricing">Hinnat</a>
-					<a href="#process">Prosessi</a>
-					<a href="#faq">FAQ</a>
-					<a href="#contact">Yhteys</a>
-				</nav>
+				<button
+					class="menu-toggle"
+					type="button"
+					aria-label="Avaa valikko"
+					aria-controls="primary-menu"
+					aria-expanded="false"
+					data-menu-open-label="Avaa valikko"
+					data-menu-close-label="Sulje valikko"
+				>
+					<span></span>
+					<span></span>
+					<span></span>
+				</button>
 
-				<div class="language-switcher language-switcher-header" aria-label="Kielen valitsin">
-					<a class="lang-button" href="../" lang="en" hreflang="en">EN</a>
-					<a class="lang-button is-active" href="./" lang="fi" hreflang="fi" aria-current="page">FI</a>
-					<a class="lang-button" href="../ru/" lang="ru" hreflang="ru">RU</a>
+				<div class="header-menu" id="primary-menu">
+					<nav class="site-nav" aria-label="Päänavigaatio">
+						<a href="#pricing">Hinnat</a>
+						<a href="#process">Prosessi</a>
+						<a href="#faq">FAQ</a>
+						<a href="#contact">Yhteys</a>
+					</nav>
+
+					<div class="language-switcher language-switcher-header" aria-label="Kielen valitsin">
+						<a class="lang-button" href="../" lang="en" hreflang="en">EN</a>
+						<a class="lang-button is-active" href="./" lang="fi" hreflang="fi" aria-current="page">FI</a>
+						<a class="lang-button" href="../ru/" lang="ru" hreflang="ru">RU</a>
+					</div>
 				</div>
 			</header>
 

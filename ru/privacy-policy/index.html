@@ -58,15 +58,32 @@
 				<a class="brand" href="../" aria-label="DuoCode Studio главная">
 					<img class="brand-logo" src="../../assets/duocode-studio-logo.svg" alt="DuoCode Studio" width="410" height="82" />
 				</a>
-				<nav class="site-nav" aria-label="Основная навигация">
-					<a href="../">Главная</a>
-					<a href="../#pricing">Цены</a>
-					<a href="../#contact">Контакты</a>
-				</nav>
-				<div class="language-switcher language-switcher-header" aria-label="Переключатель языка">
-					<a class="lang-button" href="../../privacy-policy/" lang="en" hreflang="en">EN</a>
-					<a class="lang-button" href="../../fi/privacy-policy/" lang="fi" hreflang="fi">FI</a>
-					<a class="lang-button is-active" href="./" lang="ru" hreflang="ru" aria-current="page">RU</a>
+
+				<button
+					class="menu-toggle"
+					type="button"
+					aria-label="Открыть меню"
+					aria-controls="primary-menu"
+					aria-expanded="false"
+					data-menu-open-label="Открыть меню"
+					data-menu-close-label="Закрыть меню"
+				>
+					<span></span>
+					<span></span>
+					<span></span>
+				</button>
+
+				<div class="header-menu" id="primary-menu">
+					<nav class="site-nav" aria-label="Основная навигация">
+						<a href="../">Главная</a>
+						<a href="../#pricing">Цены</a>
+						<a href="../#contact">Контакты</a>
+					</nav>
+					<div class="language-switcher language-switcher-header" aria-label="Переключатель языка">
+						<a class="lang-button" href="../../privacy-policy/" lang="en" hreflang="en">EN</a>
+						<a class="lang-button" href="../../fi/privacy-policy/" lang="fi" hreflang="fi">FI</a>
+						<a class="lang-button is-active" href="./" lang="ru" hreflang="ru" aria-current="page">RU</a>
+					</div>
 				</div>
 			</header>
 
