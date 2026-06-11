@@ -37,11 +37,48 @@ function setupMobileMenu() {
   const openLabel = menuToggle.dataset.menuOpenLabel || "Open menu";
   const closeLabel = menuToggle.dataset.menuCloseLabel || "Close menu";
   const desktopQuery = window.matchMedia("(min-width: 761px)");
+  let lockedScrollY = 0;
+
+  function lockPageScroll() {
+    lockedScrollY = window.scrollY;
+    document.documentElement.classList.add("is-menu-open");
+    document.body.classList.add("is-menu-open");
+    document.body.style.position = "fixed";
+    document.body.style.top = `-${lockedScrollY}px`;
+    document.body.style.left = "0";
+    document.body.style.right = "0";
+    document.body.style.width = "100%";
+  }
+
+  function unlockPageScroll() {
+    document.documentElement.classList.remove("is-menu-open");
+    document.body.classList.remove("is-menu-open");
+    document.body.style.position = "";
+    document.body.style.top = "";
+    document.body.style.left = "";
+    document.body.style.right = "";
+    document.body.style.width = "";
+    document.documentElement.classList.add("is-restoring-scroll");
+    window.scrollTo(0, lockedScrollY);
+    window.requestAnimationFrame(() => {
+      document.documentElement.classList.remove("is-restoring-scroll");
+    });
+  }
 
   function setMenuState(isOpen) {
+    const wasOpen = menuToggle.getAttribute("aria-expanded") === "true";
+
     siteHeader.classList.toggle("is-menu-open", isOpen);
     menuToggle.setAttribute("aria-expanded", String(isOpen));
     menuToggle.setAttribute("aria-label", isOpen ? closeLabel : openLabel);
+
+    if (isOpen && !wasOpen) {
+      lockPageScroll();
+    }
+
+    if (!isOpen && wasOpen) {
+      unlockPageScroll();
+    }
   }
 
   menuToggle.addEventListener("click", () => {
@@ -51,6 +88,16 @@ function setupMobileMenu() {
 
   menu?.querySelectorAll("a").forEach((link) => {
     link.addEventListener("click", () => setMenuState(false));
+  });
+
+  document.addEventListener("click", (event) => {
+    const isOpen = menuToggle.getAttribute("aria-expanded") === "true";
+
+    if (!isOpen || menuToggle.contains(event.target)) {
+      return;
+    }
+
+    setMenuState(false);
   });
 
   document.addEventListener("keydown", (event) => {

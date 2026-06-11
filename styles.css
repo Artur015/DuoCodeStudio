@@ -31,6 +31,14 @@ html {
 	overflow-x: clip;
 }
 
+html.is-menu-open {
+	overflow: hidden;
+}
+
+html.is-restoring-scroll {
+	scroll-behavior: auto;
+}
+
 body {
 	margin: 0;
 	min-height: 100vh;
@@ -43,6 +51,10 @@ body {
 		linear-gradient(180deg, #030912 0%, var(--bg) 46%, #0a1730 100%);
 	overflow-x: hidden;
 	overflow-x: clip;
+}
+
+body.is-menu-open {
+	overflow: hidden;
 }
 
 body::before {
@@ -1422,6 +1434,30 @@ h1 {
 		box-shadow: 0 10px 24px rgba(0, 0, 0, 0.24);
 	}
 
+	body.is-menu-open::after {
+		content: "";
+		position: fixed;
+		inset: 0;
+		z-index: 20;
+		background:
+			radial-gradient(circle at 50% 0%, rgba(110, 182, 255, 0.1), transparent 34%),
+			rgba(1, 7, 16, 0.38);
+		backdrop-filter: blur(7px);
+		pointer-events: auto;
+	}
+
+	.site-header.is-menu-open {
+		position: fixed;
+		top: 8px;
+		left: 12px;
+		right: 12px;
+		z-index: 30;
+		margin-top: 0;
+		background: rgba(7, 17, 31, 0.94);
+		border-color: rgba(195, 214, 238, 0.2);
+		box-shadow: 0 18px 44px rgba(0, 0, 0, 0.34);
+	}
+
 	.brand-logo {
 		width: min(156px, 100%);
 	}
@@ -1439,6 +1475,8 @@ h1 {
 	.header-menu {
 		order: 3;
 		display: none;
+		position: relative;
+		z-index: 1;
 		grid-column: 1 / -1;
 		grid-row: 2;
 		flex-direction: column;
@@ -1446,8 +1484,8 @@ h1 {
 		gap: 8px;
 		width: 100%;
 		margin-left: 0;
-		padding-top: 8px;
-		border-top: 1px solid rgba(195, 214, 238, 0.12);
+		padding: 10px 0 2px;
+		border-top: 1px solid rgba(195, 214, 238, 0.14);
 	}
 
 	.site-header.is-menu-open .header-menu {
@@ -1617,6 +1655,12 @@ h1 {
 		margin-top: 8px;
 		padding: 7px 10px;
 		border-radius: 18px;
+	}
+
+	.site-header.is-menu-open {
+		top: 6px;
+		left: 8px;
+		right: 8px;
 	}
 
 	.brand-logo {
